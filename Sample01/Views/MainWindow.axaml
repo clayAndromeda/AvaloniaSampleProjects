@@ -14,11 +14,27 @@
         <vm:MainWindowViewModel />
     </Design.DataContext>
 
-    <StackPanel DataContext="{Binding SimpleViewModel}" Spacing="10">
-        <TextBlock>Enter your Name:</TextBlock>
-        <TextBox Text="{Binding Name}"/>
-        <TextBox Text="{Binding Greeting, Mode=OneWay}"
-                 IsReadOnly="True" FontWeight="Bold"/>
-    </StackPanel>
+    <TabControl>
+        <!-- SimpleViewModel -->
+        <TabItem Header="SimpleViewModel">
+            <StackPanel DataContext="{Binding SimpleViewModel}" Spacing="10">
+                <TextBlock>Enter your Name:</TextBlock>
+                <TextBox Text="{Binding Name}" />
+                <TextBox Text="{Binding Greeting, Mode=OneWay}"
+                         IsReadOnly="True" FontWeight="Bold" />
+            </StackPanel>
+        </TabItem>
+
+        <!-- ReactiveViewModel -->
+        <TabItem Header="ReactiveViewModel">
+            <StackPanel DataContext="{Binding ReactiveViewModel}" Spacing="10">
+                <TextBlock>Enter your Name:</TextBlock>
+                <TextBox Text="{Binding Name}" />
+                <TextBox Text="{Binding Greeting, Mode=OneWay}"
+                         IsReadOnly="True" FontWeight="Bold" />
+            </StackPanel>
+        </TabItem>
+
+    </TabControl>
 
 </Window>
